@@ -22,14 +22,14 @@ pytest -q
 ## 2. Repository Structure
 ```
 mercor_challenge/
-  README.md                # This file
-  requirements.txt         # Dependency manifest (runtime + tests)
-  source/
-    referral_network.py    # Parts 1–3 (graph + reach + influencer metrics)
-    simulation.py          # Parts 4–5 (growth simulation + bonus optimization)
-  tests/
-    test_referral_network.py
-    test_simulation.py
+├── README.md                # This file  
+├── requirements.txt         # Dependency manifest (runtime + tests)
+├── source/
+│   ├── referral_network.py  # Parts 1–3 (graph + reach + influencer metrics)
+│   └── simulation.py\       # Parts 4–5 (growth simulation + bonus optimization)
+└── tests/
+    ├── test_referral_network.py
+    └── test_simulation.py
 ```
 
 ## 3. Design Choices (Part 1 – Referral Graph)
@@ -121,18 +121,3 @@ python -c "from source.simulation import simulate, min_bonus_for_target; print(s
 
 ## 11. Dependency Management
 `requirements.txt` declares all needed Python dependencies (pytest + standard library usage). No hidden or transitive system requirements.
-
-## 12. Final Checklist (Assignment Mapping)
-- Language & Setup: Section 1 ✅
-- Running Tests (single command): Sections 1 & 9 ✅
-- Design Choices & Part 1 API rationale: Section 3 ✅
-- Part 2 functions + k guidance: Section 4 ✅
-- Part 3 implementations + metric comparison & scenarios: Section 5 ✅
-- Part 4 simulation model & functions: Section 6 ✅
-- Part 5 algorithm + time complexity: Section 7 ✅
-- Overall complexities: Section 8 ✅
-- Source organization & dependencies: Sections 2 & 11 ✅
-- Tests present & comprehensive: Section 9 ✅
-
----
-Focused on clarity & exact requirements; advanced optimizations intentionally omitted for readability.
