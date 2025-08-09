@@ -26,7 +26,7 @@ mercor_challenge/
 ├── requirements.txt         # Dependency manifest (runtime + tests)
 ├── source/
 │   ├── referral_network.py  # Parts 1–3 (graph + reach + influencer metrics)
-│   └── simulation.py\       # Parts 4–5 (growth simulation + bonus optimization)
+│   └── simulation.py        # Parts 4–5 (growth simulation + bonus optimization)
 └── tests/
     ├── test_referral_network.py
     └── test_simulation.py
@@ -107,7 +107,7 @@ pytest -q
 ```
 Coverage: constraint enforcement (self, unique, cycle), reach & ranking, unique reach greedy, flow centrality (broker path), simulation (p=0 & p=1), bonus search feasibility.
 
-## 10. Usage Snippets (Optional)
+## 10. Usage Snippets
 ```bash
 # Add referrals & compute reach
 python -c "from source.referral_network import ReferralNetwork as R; rn=R(); rn.add_referral('A','B'); rn.add_referral('B','C'); print(rn.total_referral_count('A'))"
